@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Страница бронирования WoOx Travel</title>
+
+    <!-- Основной CSS Bootstrap -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Дополнительные файлы CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 580 Woox Travel
+
+https://templatemo.com/tm-580-woox-travel
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Начало прелоадера ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Конец прелоадера ***** -->
+
+  <!-- ***** Начало области заголовка ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Начало логотипа ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Конец логотипа ***** -->
+                    <!-- ***** Начало меню ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reservation.html">Бронирование</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Меню</span>
+                    </a>
+                    <!-- ***** Конец меню ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Конец области заголовка ***** -->
+
+  <div class="second-page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Забронируйте желаемую сделку здесь</h4>
+          <h2>Сделайте ваше бронирование</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uttersi labore et dolore magna aliqua is ipsum suspendisse ultrices gravida</p>
+          <div class="main-button"><a href="about.html">Узнать больше</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-info reservation-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-phone"></i>
+            <h4>Сделайте телефонный звонок</h4>
+            <a href="#">+123 456 789 (0)</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-envelope"></i>
+            <h4>Свяжитесь с нами по электронной почте</h4>
+            <a href="#">company@email.com</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-map-marker"></i>
+            <h4>Посетите наши офисы</h4>
+            <a href="#">24-я улица, Северный авеню, Лондон, Великобритания</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reservation-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=47.473371%2C42.986957&z=18&l=map&pt=47.473371,42.986957,pm2rdm"
+                    width="100%" height="450px" frameborder="0"
+                    style="border:0; border-top-left-radius:23px; border-top-right-radius:23px;"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <form id="reservation-form" name="gs" method="post" role="form" action="http://localhost:5000/api/reservations">
+            <div class="row">
+              <div class="col-lg-12">
+                <h4>Сделайте ваше <em>бронирование</em> через эту <em>форму</em></h4>
+              </div>
+              <div class="col-lg-6">
+                  <fieldset>
+                      <label for="Name" class="form-label">Ваше имя</label>
+                      <input type="text" name="Name" class="Name" placeholder="Напр. Джон Смит" autocomplete="on" required>
+                  </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                    <label for="Number" class="form-label">Ваш номер телефона</label>
+                    <input type="text" name="Number" class="Number" placeholder="Напр. +xxx xxx xxx" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                  <fieldset>
+                      <label for="chooseGuests" class="form-label">Количество гостей</label>
+                      <select name="Guests" class="form-select" aria-label="Пример выбора по умолчанию" id="chooseGuests" onChange="this.form.click()">
+                          <option selected>Напр. 3 или 4 или 5</option>
+                          <option type="checkbox" name="option1" value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4+">4+</option>
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                    <label for="Number" class="form-label">Дата заезда</label>
+                    <input type="date" name="date" class="date" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                  <fieldset>
+                      <label for="chooseDestination" class="form-label">Выберите направление</label>
+                      <select name="Destination" class="form-select" aria-label="Пример выбора по умолчанию" id="chooseCategory" onChange="this.form.click()">
+                          <option selected>Напр. Швейцария, Лозанна</option>
+                          <option value="Italy, Roma">Италия, Рим</option>
+                          <option value="France, Paris">Франция, Париж</option>
+                          <option value="Engaland, London">Англия, Лондон</option>
+                          <option value="Switzerland, Lausanne">Швейцария, Лозанна</option>
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-12">                        
+                  <fieldset>
+                      <button type="submit" class="main-button">Забронировать сейчас</button>
+                  </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Авторское право © 2036 <a href="#">WoOx Travel</a> Компания. Все права защищены. 
+          <br>Дизайн: <a href="https://templatemo.com" target="_blank" title="бесплатные CSS шаблоны">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+ 
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    $(".option").click(function(){
+      $(".option").removeClass("active");
+      $(this).addClass("active"); 
+    });
+
+    (function(){
+      const form = document.getElementById('reservation-form');
+      if(!form) return;
+      form.addEventListener('submit', async function(ev){
+        ev.preventDefault();
+        const url = form.getAttribute('action') || 'http://localhost:5000/api/reservations';
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        try {
+          const resp = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await resp.json();
+          if (resp.ok && data.ok) {
+            alert('Бронирование отправлено!');
+            form.reset();
+          } else {
+            alert('Ошибка: ' + (data.error || 'Не удалось отправить'));
+          }
+        } catch (e) {
+          alert('Сетевая ошибка: ' + e);
+        }
+      });
+    })();
+  </script>
+
+  </body>
+
+</html>
